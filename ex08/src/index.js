@@ -32,8 +32,8 @@ function lookUpProfile(name, prop) {
       break;
     }
   }
-  if (position == null){
-      return "No such contact"
+  if (position == null) {
+    return "No such contact";
   }
 
   if (contacts[position][prop] == undefined) {
@@ -41,7 +41,6 @@ function lookUpProfile(name, prop) {
   } else {
     return contacts[position][prop];
   }
-
 }
 
 console.log(lookUpProfile("John", "likes"));
