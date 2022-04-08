@@ -1,21 +1,20 @@
 var myPetsArray = [
-
-{
-animalType : "Dog",
-name: "Pujdo"
-},
-{
-    animalType : "Cat",
-    name: "Maca"
-},
-{
-    animalType : "Bird",
-    name: "Tweety"
-}
+  {
+    animalType: "Dog",
+    name: "Pujdo",
+  },
+  {
+    animalType: "Cat",
+    name: "Maca",
+  },
+  {
+    animalType: "Bird",
+    name: "Tweety",
+  },
 ];
 
-function myPetsFunction(pets){
-return pets.name;
+function myPetsFunction(pets) {
+  return pets.name;
 }
 
 console.log(myPetsFunction(myPetsArray[0]));
