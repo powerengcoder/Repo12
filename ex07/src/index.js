@@ -31,19 +31,30 @@ function updateRecords(object, id, prop, value) {
       var arr = object[id][prop];
       arr.push(value);
     }
-  } else if (prop === "artist" && object[id][prop] == undefined) 
+  }
+   if (prop === "artist" && object[id][prop] == undefined) 
   {
-    object[id]["artist"] = value;
-  } else {
+    object[id][prop] = value;
+  }
+
+  if(prop === "album"){
     object[id][prop] = value;
   }
 
   return object;
 }
-//console.log(updateRecords(collection, 5439, "artist", "ABBA"));
-console.log(updateRecords(collection, 5439, "tracks", "Tryyy"));
-//console.log(updateRecords(collection, 1245, "tracks", "Addicted to Love"));
-//console.log(updateRecords(collection, 5439, "tracks", "Addicted to Love"));
-//console.log(updateRecords(collection, 5439, "tracks", "Addicted to Love"));
-//console.log(updateRecords(collection, 5439, "tracks", "Tryyyy" ));
+//console.log(updateRecords(collection, 2548, "artist", "Sumejja"));
+//console.log(updateRecords(collection, 2468, "artist", "Sumejja"));
+//console.log(updateRecords(collection, 1245, "artist", "Sumejja"));
+console.log(updateRecords(collection, 5439, "artist", "Sumejja"));
+
+//console.log(updateRecords(collection, 2548, "tracks", "TRACK"));
+//console.log(updateRecords(collection, 2468, "tracks", "TRACK"));
+//console.log(updateRecords(collection, 1245, "tracks", "TRACK"));
+//console.log(updateRecords(collection, 5439, "tracks", "TRACK"));
+
+//console.log(updateRecords(collection, 2548, "album", "2022" ));
+//console.log(updateRecords(collection, 2468, "album", "2022" ));
+//console.log(updateRecords(collection, 1245, "album", "2022" ));
+//console.log(updateRecords(collection, 2548, "album", "2022" ));
 module.exports = updateRecords;
